@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Space Intergalactic Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header id="main-header">
+        <div class="logo">FINAL <span>SPACE</span></div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#" class="nav-item active" data-target="home">Home</a></li>
+                <li><a href="#" class="nav-item" data-target="characters">Characters</a></li>
+                <li><a href="#" class="nav-item" data-target="episodes">Episodes</a></li>
+                <li><a href="#" class="nav-item" data-target="quotes">Quotes</a></li>
+                <li><a href="#" class="nav-item" data-target="locations">Locations</a></li>
+                <li><a href="#" class="nav-item" data-target="watchlist">My Watchlist</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="page-section active">
+            <div class="hero">
+                <h1>Welcome to Final Space</h1>
+                <p>Join Gary Goodspeed, Mooncake, and the rest of the crew across the universe to unlock the mysteries of the cosmos! Explore raw data pulled straight from deep-space servers.</p>
+                <button class="cta-btn" onclick="navigateToSection('characters')">Explore Characters</button>
+            </div>
+        </section>
+
+        <section id="characters" class="page-section">
+            <h2>Galaxy Profiles</h2>
+            <div class="grid-container" id="characters-grid">
+                <p class="loading">Fetching data from light-years away...</p>
+            </div>
+        </section>
+
+        <section id="episodes" class="page-section">
+            <h2>Log Records (Episodes)</h2>
+            <div class="grid-container" id="episodes-grid">
+                <p class="loading">Decoding space transmissions...</p>
+            </div>
+        </section>
+
+        <section id="quotes" class="page-section">
+            <h2>Memorable Comms (Quotes)</h2>
+            <div class="grid-container" id="quotes-grid">
+                <p class="loading">Gathering audio frequencies...</p>
+            </div>
+        </section>
+
+        <section id="locations" class="page-section">
+            <h2>Space Sectors & Locations</h2>
+            <div class="grid-container" id="locations-grid">
+                <p class="loading">Mapping galaxy coordinates...</p>
+            </div>
+        </section>
+
+        <section id="watchlist" class="page-section">
+            <h2>Your Flight Dashboard</h2>
+            <p>Save notes or track episodes you need to rewatch below. Stored securely inside your spaceship's local memory data cells.</p>
+            <div class="todo-wrapper">
+                <div class="todo-inputs">
+                    <input type="text" id="todo-input" placeholder="Add custom task or episode tracking...">
+                    <button id="todo-add-btn">Log Event</button>
+                </div>
+                <ul id="todo-list"></ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Final Space Fan Portal. Powered by the Final Space REST API.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
