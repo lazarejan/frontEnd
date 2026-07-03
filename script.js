@@ -54,7 +54,7 @@ async function fetchCharacters() {
         data.slice(0, 12).forEach(char => {
             grid.innerHTML += `
                 <div class="card">
-                    <img src="${char.img_url}" alt="${char.name}" onerror="this.src='https://via.placeholder.com/300x250'">
+                    <img src="${char.img_url}" alt="${char.name}">
                     <div class="card-info">
                         <h3>${char.name}</h3>
                         <p><strong>Species:</strong> ${char.species}</p>
@@ -79,7 +79,7 @@ async function fetchEpisodes() {
         data.slice(0, 12).forEach(ep => {
             grid.innerHTML += `
                 <div class="card">
-                    <img src="${ep.img_url}" alt="${ep.name}" onerror="this.src='https://via.placeholder.com/300x250'">
+                    <img src="${ep.img_url}" alt="${ep.name}">
                     <div class="card-info">
                         <h3>${ep.name}</h3>
                         <p><strong>Air Date:</strong> ${ep.air_date}</p>
@@ -125,7 +125,7 @@ async function fetchLocations() {
         data.slice(0, 12).forEach(loc => {
             grid.innerHTML += `
                 <div class="card">
-                    <img src="${loc.img_url}" alt="${loc.name}" onerror="this.src='https://via.placeholder.com/300x250'">
+                    <img src="${loc.img_url}" alt="${loc.name}" >
                     <div class="card-info">
                         <h3>${loc.name}</h3>
                         <p><strong>Type:</strong> ${loc.type}</p>
