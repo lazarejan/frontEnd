@@ -1,19 +1,15 @@
 const API_URL = "https://finalspaceapi.com/api/v0";
 
-// Wait for the HTML structure to load
 document.addEventListener("DOMContentLoaded", () => {
     initNavigation();
     initBurgerMenu();
     initWatchlist();
     
-    // Load data from API
     fetchCharacters();
     fetchEpisodes();
     fetchQuotes();
     fetchLocations();
 });
-
-// 1. Navigation System (SPA Multi-page Toggling)
 function initNavigation() {
     const navLinks = document.querySelectorAll(".nav-item");
     
@@ -22,15 +18,12 @@ function initNavigation() {
             e.preventDefault();
             const target = link.getAttribute("data-target");
             
-            // Hide all sections, show the clicked section
             document.querySelectorAll(".page-section").forEach(sec => sec.classList.remove("active"));
             document.getElementById(target).classList.add("active");
             
-            // Highlight the active nav menu link
             navLinks.forEach(l => l.classList.remove("active"));
             link.classList.add("active");
             
-            // Close mobile burger menu automatically on click
             document.querySelector(".nav-links").classList.remove("nav-active");
             document.querySelector(".burger").classList.remove("toggle");
             
@@ -38,8 +31,6 @@ function initNavigation() {
         });
     });
 }
-
-// 2. Mobile Burger Menu Toggle
 function initBurgerMenu() {
     const burger = document.querySelector(".burger");
     const nav = document.querySelector(".nav-links");
@@ -52,7 +43,7 @@ function initBurgerMenu() {
 
 
 
-// 4. API Operations (Async / Await)
+
 async function fetchCharacters() {
     const grid = document.getElementById("characters-grid");
     try {
@@ -147,7 +138,7 @@ async function fetchLocations() {
     }
 }
 
-// 5. Watchlist Logic (LocalStorage Management)
+
 let watchlist = JSON.parse(localStorage.getItem("finalSpaceWatchlist")) || [];
 
 function initWatchlist() {
@@ -181,7 +172,6 @@ function renderWatchlist() {
     });
 }
 
-// Global scope attachment for the inline HTML item button action click mapping
 window.removeWatchlistItem = function(index) {
     watchlist.splice(index, 1);
     renderWatchlist();
